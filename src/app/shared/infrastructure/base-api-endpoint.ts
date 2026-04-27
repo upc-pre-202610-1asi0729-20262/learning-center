@@ -42,6 +42,12 @@ export abstract class BaseApiEndpoint<
     }
   }
 
+  getById(id: number): Observable<TEntity> {
+    return this.http.get<TResource>(`${this.endpointUrl}/${id}`).pipe(
+      map(resource => this.assembler.toEntityFromResource(resource)),
+      catchError(this.handleError('Failed to fetch entity')));
+  }
+
   create(entity: TEntity): Observable<TEntity> {
     const resource = this.assembler.toResourceFromEntity(entity);
     return this.http.post<TResource>(this.endpointUrl, resource).pipe(
