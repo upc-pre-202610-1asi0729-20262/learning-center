@@ -1,73 +1,72 @@
 {
-  "option": {
-    "home": "Home",
-    "about": "About",
-    "categories": "Categories",
-    "courses": "Courses"
+  "option" : {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "categories": "Categorías",
+    "courses": "Cursos"
   },
   "about": {
-    "title": "About us",
-    "content": "ACME Learning Center is an Education Platform, part of ACME Corporation."
+    "title": "Acerca de nosotros",
+    "content": "ACME Learning Center es una plataforma educativa, parte de ACME Corporation."
   },
   "home": {
-    "title": "Welcome",
-    "content": "Welcome to ACME Learning Center."
+    "title": "Bienvenido",
+    "content": "Bienvenido a ACME Learning Center."
   },
   "page-not-found": {
-    "title": "Page not found",
-    "content": "The path <strong>{{ invalid_path }}</strong> is not valid.",
-    "go-home": "Go home"
+    "title": "Página no encontrada",
+    "content": "La ruta <strong>{{ invalidPath }}</strong> es inválida.",
+    "go-home": "Ir a Inicio"
   },
   "footer": {
-    "rights": "All rights reserved.",
-    "powered-by": "Powered by",
-    "and": "and"
+    "rights": "Todos los derechos reservados.",
+    "powered-by": "Desarrollado con",
+    "and": "y"
   },
   "categories": {
-    "list-title": "Categories",
+    "list-title": "Categorías",
     "id": "ID",
-    "name": "Name",
-    "actions": "Actions",
-    "new": "New Category",
-    "edit": "Edit",
-    "delete": "Delete"
+    "name": "Nombre",
+    "actions": "Acciones",
+    "new": "Nueva Categoría",
+    "edit": "Editar",
+    "delete": "Eliminar"
   },
   "category": {
-    "new-title": "Create New Category",
-    "edit-title": "Edit Category",
-    "name": "Name",
-    "create": "Create Category",
-    "update": "Update Category",
-    "cancel": "Cancel",
+    "new-title": "Crear Nueva Categoría",
+    "edit-title": "Editar Categoría",
+    "name": "Nombre",
+    "create": "Crear Categoría",
+    "update": "Actualizar Categoría",
+    "cancel": "Cancelar",
     "error": {
-      "name-required": "Name is required."
-    },
-    "courses": {
-      "list-title": "Courses",
-      "id": "ID",
-      "title": "Title",
-      "description": "Description",
-      "category": "Category",
-      "actions": "Actions",
-      "new": "New Course",
-      "edit": "Edit",
-      "delete": "Delete"
-    },
-    "course": {
-      "new-title": "Create New Course",
-      "edit-title": "Edit Course",
-      "title": "Title",
-      "description": "Description",
-      "category": "Category",
-      "create": "Create Course",
-      "update": "Update Course",
-      "cancel": "Cancel",
-      "error": {
-        "title-required": "Title is required.",
-        "description-required": "Description is required.",
-        "category-required": "Category is required."
-      }
+      "name-required": "El nombre es obligatorio"
+    }
+  },
+  "courses": {
+    "list-title": "Cursos",
+    "id": "ID",
+    "title": "Título",
+    "description": "Descripción",
+    "category": "Categoría",
+    "actions": "Acciones",
+    "new": "Nuevo Curso",
+    "edit": "Editar",
+    "delete": "Eliminar"
+  },
+  "course": {
+    "new-title": "Crear Nuevo Curso",
+    "edit-title": "Editar Curso",
+    "title": "Título",
+    "description": "Descripción",
+    "category": "Categoría",
+    "create": "Crear Curso",
+    "update": "Actualizar Curso",
+    "cancel": "Cancelar",
+    "error": {
+      "title-required": "El título es obligatorio",
+      "description-required": "La descripción es obligatoria",
+      "category-required": "La categoría es obligatoria"
     }
   }
 }
-
