@@ -7,8 +7,15 @@ import { environment } from '../../../environments/environment';
 
 const categoriesEndpointUrl = `${environment.platformProviderApiBaseUrl}${environment.platformProviderCategoriesEndpointPath}`;
 
+/**
+ * Infrastructure endpoint client for category CRUD integration.
+ */
 export class CategoriesApiEndpoint extends
   BaseApiEndpoint<Category, CategoryResource, CategoriesResponse, CategoryAssembler>{
+  /**
+   * Creates a category endpoint adapter.
+   * @param http - Angular HTTP client used to call the remote API.
+   */
   constructor(http: HttpClient) {
     super(http, categoriesEndpointUrl, new CategoryAssembler());
   }

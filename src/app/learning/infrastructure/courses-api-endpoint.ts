@@ -7,12 +7,12 @@ import {environment} from '../../../environments/environment';
 
 
 /**
- * Endpoint client for course CRUD operations.
+ * Infrastructure endpoint client for course CRUD integration.
  */
 export class CoursesApiEndpoint extends BaseApiEndpoint<Course, CourseResource, CoursesResponse, CourseAssembler> {
   /**
-   * Creates an instance of CoursesApiEndpoint.
-   * @param http - The HttpClient to be used for making API requests.
+   * Creates a course endpoint adapter.
+   * @param http - Angular HTTP client used to call the remote API.
    */
   constructor(http: HttpClient) {
     super(http, `${environment.platformProviderApiBaseUrl}${environment.platformProviderCoursesEndpointPath}`, new CourseAssembler());

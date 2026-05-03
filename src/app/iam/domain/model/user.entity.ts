@@ -1,7 +1,7 @@
 import {BaseEntity} from '../../../shared/domain/model/base-entity';
 
 /**
- * Represents an authenticated account in the IAM domain model.
+ * Domain entity representing an account in the IAM bounded context.
  */
 export class User implements BaseEntity {
   /**

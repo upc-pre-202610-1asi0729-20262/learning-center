@@ -1,7 +1,7 @@
 import {BaseResource, BaseResponse} from '../../shared/infrastructure/base-response';
 
 /**
- * Resource representation of a course.
+ * Infrastructure resource contract representing a course record.
  */
 export interface CourseResource extends BaseResource {
   /**
@@ -24,7 +24,7 @@ export interface CourseResource extends BaseResource {
 }
 
 /**
- * Response envelope for course collection queries.
+ * Infrastructure response envelope for course collection queries.
  */
 export interface CoursesResponse extends BaseResponse {
   /**

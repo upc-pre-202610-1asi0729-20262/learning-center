@@ -7,6 +7,9 @@ import { Observable } from 'rxjs';
 import { CoursesApiEndpoint } from './courses-api-endpoint';
 import { Course } from '../domain/model/couse.entity';
 
+/**
+ * Infrastructure facade exposing Learning bounded-context endpoint operations.
+ */
 @Injectable({ providedIn: 'root' })
 export class LearningApi extends BaseApi {
   private readonly categoriesEndpoint: CategoriesApiEndpoint;
@@ -61,22 +64,47 @@ export class LearningApi extends BaseApi {
   deleteCourse(id: number): Observable<void> {
     return this.coursesEndpoint.delete(id);
   }
+
+  /**
+   * Retrieves all categories.
+   * @returns Stream with the category collection.
+   */
   getCategories(): Observable<Category[]> {
     return this.categoriesEndpoint.getAll();
   }
 
+  /**
+   * Retrieves a single category by ID.
+   * @param id - Category identifier.
+   * @returns Stream with the selected category.
+   */
   getCategory(id: number): Observable<Category> {
     return this.categoriesEndpoint.getById(id);
   }
 
+  /**
+   * Creates a new category.
+   * @param category - Category entity to persist.
+   * @returns Stream with the created category.
+   */
   createCategory(category: Category) {
     return this.categoriesEndpoint.create(category);
   }
 
+  /**
+   * Updates an existing category.
+   * @param category - Category entity carrying updated values.
+   * @returns Stream with the updated category.
+   */
   updateCategory(category: Category): Observable<Category> {
     return this.categoriesEndpoint.update(category, category.id);
   }
 
+  /**
+   * Deletes a category by identifier.
+   * @param id - Category identifier.
+   * @returns Completion stream.
+   */
   deleteCategory(id: number): Observable<void> {
     return this.categoriesEndpoint.delete(id);
   }

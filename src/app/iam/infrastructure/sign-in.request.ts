@@ -1,5 +1,5 @@
 /**
- * Resource payload sent to the sign-in endpoint.
+ * Infrastructure request contract sent to the sign-in endpoint.
  */
 export interface SignInRequest {
   /** Username used to authenticate the account. */

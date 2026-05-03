@@ -1,5 +1,5 @@
 /**
- * Captures credentials required to authenticate in the IAM context.
+ * Domain command carrying credentials for IAM authentication.
  */
 export class SignInCommand {
   /**

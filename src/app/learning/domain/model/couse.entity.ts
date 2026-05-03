@@ -1,7 +1,7 @@
 import {Category} from './category.entity';
 
 /**
- * Represents a course aggregate in the learning domain model.
+ * Aggregate root representing a course in the Learning bounded context.
  */
 export class Course {
   /**

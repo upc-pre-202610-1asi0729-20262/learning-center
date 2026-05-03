@@ -3,13 +3,13 @@ import {Course} from '../domain/model/couse.entity';
 import {BaseAssembler} from '../../shared/infrastructure/base-assembler';
 
 /**
- * Maps course entities to and from API resources.
+ * Maps course domain entities to and from infrastructure contracts.
  */
 export class CourseAssembler implements BaseAssembler<Course, CourseResource, CoursesResponse> {
   /**
-   * Converts a CoursesResponse to an array of Course entities.
-   * @param response - The API response containing courses.
-   * @returns An array of Course entities.
+   * Maps a course response envelope into domain entities.
+   * @param response - Infrastructure response containing course resources.
+   * @returns Domain entities for the learning application layer.
    */
   toEntitiesFromResponse(response: CoursesResponse): Course[] {
     console.log(response);
@@ -17,9 +17,9 @@ export class CourseAssembler implements BaseAssembler<Course, CourseResource, Co
   }
 
   /**
-   * Converts a CourseResource to a Course entity.
-   * @param resource - The resource to convert.
-   * @returns The converted Course entity.
+   * Maps one course resource contract into a domain entity.
+   * @param resource - Infrastructure contract to convert.
+   * @returns Course entity.
    */
   toEntityFromResource(resource: CourseResource): Course {
     return new Course({
@@ -31,9 +31,9 @@ export class CourseAssembler implements BaseAssembler<Course, CourseResource, Co
   }
 
   /**
-   * Converts a Course entity to a CourseResource.
-   * @param entity - The entity to convert.
-   * @returns The converted CourseResource.
+   * Maps one course domain entity into an infrastructure resource contract.
+   * @param entity - Domain entity to convert.
+   * @returns Resource contract expected by the remote API.
    */
   toResourceFromEntity(entity: Course): CourseResource {
     return {

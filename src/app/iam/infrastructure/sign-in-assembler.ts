@@ -3,13 +3,13 @@ import {SignInCommand} from '../domain/model/sign-in.command';
 import {SignInRequest} from './sign-in.request';
 
 /**
- * Maps IAM sign-in commands and endpoint payloads.
+ * Infrastructure mapper for IAM sign-in commands and API contracts.
  */
 export class SignInAssembler {
   /**
-   * Converts the endpoint response into an application-level resource.
-   * @param response - Raw response returned by the sign-in endpoint.
-   * @returns Mapped sign-in resource.
+   * Maps a sign-in response contract into a resource consumed by the application layer.
+   * @param response - Infrastructure response contract returned by the sign-in endpoint.
+   * @returns Sign-in resource contract.
    */
   toResourceFromResponse(response: SignInResponse): SignInResource {
     return {
@@ -20,9 +20,9 @@ export class SignInAssembler {
   }
 
   /**
-   * Converts a sign-in command into the request payload expected by the API.
+   * Maps a sign-in command into the request contract expected by the API.
    * @param command - Domain command with credentials.
-   * @returns Mapped request payload.
+   * @returns Infrastructure request contract.
    */
   toRequestFromCommand(command: SignInCommand): SignInRequest {
     return {

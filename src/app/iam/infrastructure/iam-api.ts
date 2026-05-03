@@ -13,6 +13,10 @@ import {SignInResource} from './sign-in-response';
 
 /**
  * Infrastructure facade that exposes IAM endpoint operations.
+ *
+ * @remarks
+ * `IamApi` belongs to the infrastructure layer and coordinates endpoint clients
+ * plus assemblers that map API contracts to domain-facing models.
  */
 @Injectable({providedIn: 'root'})
 export class IamApi extends BaseApi {

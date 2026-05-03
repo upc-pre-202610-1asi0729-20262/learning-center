@@ -8,6 +8,14 @@ import { Course } from '../domain/model/couse.entity';
 @Injectable({
   providedIn: 'root',
 })
+/**
+ * Application-layer store that orchestrates Learning use cases.
+ *
+ * @remarks
+ * This type coordinates infrastructure calls and projects results into reactive
+ * UI state. Domain entities stay in the domain layer while API contracts stay
+ * in infrastructure.
+ */
 export class LearningStore {
   /**
    * Computed signal for the count of courses.
@@ -265,6 +273,9 @@ export class LearningStore {
     );
   }
 
+  /**
+   * Enriches a course entity with its associated category entity.
+   */
   private assignCategoryToCourse(course: Course): Course {
     const categoryId = course.categoryId ?? 0;
     course.category = categoryId ? (this.getCategoryById(categoryId)() ?? null) : null;

@@ -3,13 +3,13 @@ import {SignUpCommand} from '../domain/model/sign-up.command';
 import {SignUpResource, SignUpResponse} from './sign-up-response';
 
 /**
- * Maps IAM sign-up commands and endpoint payloads.
+ * Infrastructure mapper for IAM sign-up commands and API contracts.
  */
 export class SignUpAssembler {
   /**
-   * Converts the endpoint response into an application-level resource.
-   * @param response - Raw response returned by the sign-up endpoint.
-   * @returns Mapped sign-up resource.
+   * Maps a sign-up response contract into a resource consumed by the application layer.
+   * @param response - Infrastructure response contract returned by the sign-up endpoint.
+   * @returns Sign-up resource contract.
    */
   toResourceFromResponse(response: SignUpResponse): SignUpResource {
     return {
@@ -19,9 +19,9 @@ export class SignUpAssembler {
   }
 
   /**
-   * Converts a sign-up command into the request payload expected by the API.
+   * Maps a sign-up command into the request contract expected by the API.
    * @param command - Domain command with account credentials.
-   * @returns Mapped request payload.
+   * @returns Infrastructure request contract.
    */
   toRequestFromCommand(command: SignUpCommand): SignUpRequest {
     return {

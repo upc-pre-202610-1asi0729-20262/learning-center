@@ -3,6 +3,10 @@ import {Observable, throwError} from 'rxjs';
 
 /**
  * Provides reusable HTTP error translation for infrastructure services.
+ *
+ * @remarks
+ * This type is intended for `*-api` endpoint clients that integrate with
+ * external systems from the infrastructure layer.
  */
 export abstract class ErrorHandlingEnabledBaseType {
   /**

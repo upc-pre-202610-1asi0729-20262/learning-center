@@ -1,7 +1,7 @@
 import {BaseResource, BaseResponse} from '../../shared/infrastructure/base-response';
 
 /**
- * Resource describing a user returned by IAM endpoints.
+ * Infrastructure resource contract describing a user from IAM endpoints.
  */
 export interface UserResource extends BaseResource {
   id: number;
@@ -9,7 +9,7 @@ export interface UserResource extends BaseResource {
 }
 
 /**
- * Response envelope for user collection queries.
+ * Infrastructure response envelope for user collection queries.
  */
 export interface UsersResponse extends BaseResponse {
   courses: UserResource[];

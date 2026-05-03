@@ -1,5 +1,5 @@
 /**
- * Captures credentials required to register a new IAM account.
+ * Domain command carrying credentials for IAM account registration.
  */
 export class SignUpCommand {
   /**

@@ -1,6 +1,13 @@
 import { BaseEntity } from '../../../shared/domain/model/base-entity';
 
+/**
+ * Category entity in the Learning bounded context.
+ */
 export class Category implements BaseEntity {
+  /**
+   * Creates a category entity instance.
+   * @param props - Identity and name values.
+   */
   constructor(props: {id: number; name: string}) {
     this._id = props.id;
     this._name = props.name;

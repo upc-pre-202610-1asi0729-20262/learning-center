@@ -65,6 +65,16 @@ Functional requirements are documented in [`docs/user-stories.md`](docs/user-sto
 ### Class Diagram
 The class diagram is available in [`docs/class-diagram.puml`](docs/class-diagram.puml).
 
+### TSDoc and DDD Conventions
+- Use DDD-oriented terms in code comments:
+  - `Entity` for domain objects with identity.
+  - `Command` for intent objects sent from presentation/application to domain workflows.
+  - `Assembler` for mappers between domain entities and infrastructure contracts.
+  - `Application Store` for orchestration and reactive state in the application layer.
+- Treat `*-api` classes and all `*Request`/`*Response`/`*Resource` types as **infrastructure-layer contracts**.
+- Avoid the term `DTO` in this codebase; prefer `resource`, `request contract`, or `response contract`.
+- Keep TSDoc focused on layer responsibility, boundary translation, and business intent.
+
 ## Prerequisites
 Before running the project, make sure the environment includes:
 - Node.js

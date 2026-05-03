@@ -1,5 +1,5 @@
 /**
- * Resource payload sent to the sign-up endpoint.
+ * Infrastructure request contract sent to the sign-up endpoint.
  */
 export interface SignUpRequest{
   /** Username for the new account. */

@@ -6,7 +6,11 @@ import {IamApi} from '../infrastructure/iam-api';
 import {SignUpCommand} from '../domain/model/sign-up.command';
 
 /**
- * Holds IAM application state and orchestrates authentication flows.
+ * Application-layer store that orchestrates IAM authentication use cases.
+ *
+ * @remarks
+ * This type coordinates domain commands with infrastructure services and
+ * projects authentication state for presentation components.
  */
 @Injectable({providedIn: 'root'})
 export class IamStore {
